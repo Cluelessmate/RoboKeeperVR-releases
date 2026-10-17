@@ -2,6 +2,17 @@
 
 Every change gets a new build number. Not every build is published: a GitHub release lists everything since the last one, so read down to the previous published version.
 
+## v1.7.0: "Matchday Live"
+
+### New
+- **Penalty run-ups like real takers.** Robots now pick from eight run-ups: the standard angled run, a long sprint from the edge of the box, a two-step stab, a dead-straight run, a curved run from wide, a skip-hop just before the kick, a slow robot march then a burst, and a dead stop to wait for you to move before going again. Other shots get a few simpler run-ups too.
+- **Matches feel more like real football.** Teams push up and spread wide when they have the ball and drop back narrow when they don't, and each robot drifts so the shape breathes. Carriers weave and jink past defenders. Overhit passes go out for **throw-ins** (ball held overhead, then thrown) and over the goal line for **corners** (whipped into the box for a header) and **goal kicks**. Their keeper **dives** at your team's shots (the wrong way when it goes in), shots can come **off the post**, and the scoring team runs to the corner flag to **celebrate** with arms up and jumps. The crazy slide tackles stay.
+
+### Changed
+- **Better-looking stadiums.** Real seats in every stand (one stand in your club colour), split into blocks by stair aisles, with empty seats, half-full blocks and packed ends so the crowd is no longer one solid slab. Fans now have arms (most throw them up when the crowd gets loud), trousers, scarves, hair and woolly hats, and some stand while others sit. There's a club-colour band along the front of each stand, glowing light strips under the roofs at night, and two team dugouts on the touchline.
+- **Nicer goals and grass.** The nets hang and sag like real nets and use a diamond mesh; the posts have dark collars at the grass. The mowing stripes swap light and dark depending on which way you look along them (like real cut grass), stadium pitches have a faint cross-cut, the grass is a richer green and has a soft sheen at low angles.
+- **Robots move like robots.** Their joints move in quick servo "ticks" instead of a smooth human swing, feet land with a heavy clunk, arms pump stiffly with elbows locked, the head stays level and locked on, and when they're standing about the head scans in sharp snaps.
+
 ## v1.6.0: "Rocket Gloves"
 
 ### New
