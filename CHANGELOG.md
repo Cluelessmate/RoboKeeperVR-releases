@@ -2,6 +2,23 @@
 
 Every change gets a new build number. Not every build is published: a GitHub release lists everything since the last one, so read down to the previous published version.
 
+## v1.6.0: "Rocket Gloves"
+
+### New
+- **You're a robot keeper.** Your keeper is a robot like the others: robot head, chassis and legs, with your keeper kit (shirt, shorts, socks and boots) worn over the top. In the headset you only see your body when you look down; the TV camera always sees the whole robot.
+- **Floating rocket gloves.** Your gloves aren't attached to your body any more: they float on rocket boosters. The boosters fire (flame, glow and a whoosh) when a glove stretches out for a fast save.
+- **Wrist hologram.** The score, multiplier, lives or match info and focus meter are now a hologram that flickers on above your wrist when you look at it, and fades when you look away.
+- **2 player: mouse controls for the striker.** Move the mouse to aim at the goal, hold left click to fill the power meter (it rises and falls, so let go at the right moment), mouse wheel for the shot type, right click for a dummy run-up. Curl shots bend in by themselves. There's a big power meter on the PC screen and a steady striker camera behind the penalty spot. A gamepad still works.
+
+### Changed
+- **The ball is much easier to see at a distance**: it's drawn bigger, glows and has a soft halo the further it is from you, so you can follow it through a crowd of robots in a season match. Close to you it's a normal ball.
+- **Stronger vibration** whenever you touch the ball: every pulse is now long and strong enough to feel on PSVR2 Sense controllers through SteamVR.
+
+### Fixed
+- **Moving with the left stick no longer stretches your hands out.** Walking was being read as a fast fling of your arms (dive assist).
+- **2 player: "Waiting for the robot..." forever.** After a season match the robot was left in match mode and never took the next shot. It's now reset whenever a game starts or you go back to the menu, so 2 player (and every other mode) always starts with a robot that moves.
+- **Leaving 2 player** always puts everything back: the power meter and striker panel go, the keeper's keys and camera return to normal.
+
 ## v1.5.3
 
 ### Fixed
