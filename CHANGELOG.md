@@ -2,6 +2,74 @@
 
 Every change gets a new build number. Not every build is published: a GitHub release lists everything since the last one, so read down to the previous published version.
 
+## v1.11.1: "New Look"
+
+### Changed
+- **New game icon** in the Punch Pads style: a chunky orange robot keeper glove (rocket booster firing) punching a football, with a yellow impact burst on a gunmetal tile edged in the six pad colours. It's used for the exe, the window and the project.
+- **New loading screen:** the same artwork over a big ROBOKEEPER title in Bungee with a cyan VR pad and a row of little punch pads, on the console's gunmetal colour.
+- The "LOGAN PRESENTS" intro in the headset now has a strip in the six pad colours instead of the orange line.
+- **Upload to GitHub now moves on to the next version by itself:** after a successful push it raises the version (for example 1.11.1 → 1.11.2) in the project and export settings, starts an "in progress" entry in the changelog and pushes that, so new work never lands on a version that's already been published. Run `publish.ps1` with `-NoBump` to skip it.
+
+## v1.11.0: "Punch Pads"
+
+### New
+- **New menus: chunky 3D punch pads.** Every menu button is now a real arcade pad, with a housing, a light ring and a coloured cap that moves. Your glove pushes the cap in; a proper punch slams it to the bottom with a heavy clunk, a hard controller thump, sparks and a split-second freeze, and it springs back up past its rest. The ring glows and the pad rises a touch as your glove comes close (with a soft tick). Brushing past or resting a glove on a pad doesn't press it, but pushing it nearly all the way in does.
+- **Arcade console:** the main menu's six pads and the full-time buttons sit on a console tilted towards you at chest height, under a screen showing your club and next fixture.
+- **The menus are at the training ground** (Maresfield Rec) instead of the stadium.
+- **New UI style, Punch Pads** (now the default): gunmetal console, bright orange, yellow, blue, green, purple and white pads, and new fonts: Bungee for the pads, titles and call-outs, Rubik for smaller text. The other styles are still in Options → Sound & more → UI STYLE.
+
+### Changed
+- **HUD:** big call-outs ("GREAT SAVE!", "WAVE 3") are now coloured banners that slam in and snap shut. Score popups are chunky coloured chips that pop in and out. On the big screen the score rolls up with a "+points" flash, and the combo and wave sit in coloured pills. The wrist hologram is unchanged.
+- **Pad text always fits:** every label is sized to fit its pad, wrapping between words when that helps. A new test checks every pad on every page in every UI style.
+
+### Fixed
+- **LICENSES.txt is written again when publishing:** the tool the upload script uses was missing. It now includes Godot's notices and all the font licences.
+
+## v1.10.0: "Total Football"
+
+### Changed
+- **The robots actually dribble now.** The ball carrier knocks the ball ahead in touches and runs onto it, steers round defenders in the way, and beats them with skill moves: a robotic shoulder-drop jink and a burst past, instead of the ball jumping sideways.
+- **Real tackling.** Defenders close down and either poke the ball away with a standing tackle (they don't always win it; sometimes the attacker rides it and skips past) or fly in with a slide.
+- **Brutal slide tackles.** Faster, longer slides that throw up sparks along the grass. Big hits launch the victim into the air in a cartwheel; he lands in a heap with a dust and spark burst, sometimes minus an arm. Now and then an attacker sees it coming and hurdles the slide, keeping the ball.
+- **Fluid matches: the ball never teleports or stops dead.** It has real momentum: passes slow as they roll and the receiver takes it in his stride, tackles leave a loose ball squirting away, shots off the post rebound back into play, and the ball spins the way it is actually moving.
+- **Play carries on from where the ball really is.** After you parry or block a shot, the match continues from your real ball wherever it ends up, still rolling. When you hold it and don't distribute, you roll it out to a defender. Their keeper rolls out saves to a team-mate.
+- **Proper restarts.** Shots that go wide are goal kicks taken by a defender from the six-yard box; throw-ins, corners and goal kicks wait for the taker to get there, then a fresh ball appears. Throw-ins leave from over the robot's head.
+- Back-passes to you are played from wherever the defender has dribbled the ball, with no jump.
+
+## v1.9.0: "Big Moments"
+
+### New
+- **Saves feel bigger.** Hard shots you get a hand to now land with a split-second freeze, an impact ring and sparks; fast catches too. Great saves get a louder cheer and applause.
+- **Near misses:** shots that fly just wide or over, or come off the woodwork, make the whole stadium gasp ("JUST WIDE!"), with the announcer calling it.
+- **Match atmosphere:** the announcer and crowd react to tackles ("What a tackle!", "Oh! That is a crunching challenge!"), shots off the post ("Off the post!", "It's hit the woodwork!") and corners ("Corner!"). Seven new announcer lines.
+- **Goal replays in season matches:** when your team scores at the far end, the big screen replays it from a TV camera behind the goal ("Let's see that again!"); goals you concede are replayed too.
+- **Graphics setting** (Options → Sound & more → GRAPHICS: Low / Medium / High). Low: fewer fans, no shadows, no grass tufts, 75% headset resolution and 2x anti-aliasing. Medium: most of the crowd, shorter shadows, 88% resolution. High: everything. Resolution and shadows change straight away; the crowd from the next match.
+- **Two keeper buttons:** **A/X** passes to the teammate you're looking at (thrown out of your hands, or played along the ground from your feet; if nobody's there it goes where you look). **B/Y** kicks it long where you're looking: a drop kick from your hands or a big kick from your feet, harder the longer you hold. On the keyboard: E to pass, Q to kick. Recenter is now in the pause menu (it used to be B/Y).
+
+### Changed
+- **Hand-painted grass:** soft brush-stroke patches in a few tones of green, broad colour washes and the odd lighter dab, with just a hint of short-blade texture up close.
+- **Painted pitch lines:** the markings are slightly patchy and see-through, like paint on grass, instead of solid white strips.
+
+### Fixed
+- **The crowd had no bodies on some graphics cards** (only heads showed). Fans are now built so their bodies always show.
+
+## v1.8.1
+
+### Changed
+- **Back to the previous visuals.** The bright, saturated cel-shaded look from 1.8.0 was too much, so the lighting, colours, grass, stands and goals are back to how they were in 1.7.0. The fix for the hard seam in the grass stripes is kept, and so are all of 1.8.0's other changes (keeper body, leg saves, in-stride shots, passing).
+
+## v1.8.0: "Arcade Polish"
+
+### Changed
+- **New art style: bright and stylised**, in the spirit of arcade football games. Cel-shaded (toon) lighting on everything, punchier colours and contrast, a deep blue sky, rich green grass with clean broad mowing stripes, teal stands and seats, cyan light bars, and a neon-lit back frame on the goals. Robots, gloves and scenery all share the look.
+- **Your body in the headset** only appears when you really look down for your feet, and then it's just your socks and boots. Your legs are now sized to your height, so you stand tall instead of always crouching (the TV camera sees the whole robot keeper standing properly).
+- **Leg saves are subtler**: a foot only slides out a little (at most about 40 cm) for a low ball, and only when you're moving towards it, by stepping or with the left stick. Hands are always the better save.
+- **Match shots flow**: in open play the striker now shoots in his stride from exactly where the ball is. No more stopping, teleporting to a new spot, beeping and flashing red eyes; the ball just carries on as the real ball you have to save. (Free kicks and penalties are still set up properly with a whistle.)
+- **More varied passing**: short passes along the floor, driven passes, chips over the top, long floated balls and low pinged switches, through balls into space for runners, and give-and-go one-twos where the passer bursts forward for the return. Carriers release the ball sooner, so the play flows. Strikers shoot from different distances each attack.
+
+### Fixed
+- A hard seam in the grass stripes right under you.
+
 ## v1.7.0: "Matchday Live"
 
 ### New
