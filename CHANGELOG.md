@@ -2,6 +2,119 @@
 
 Every change gets a new build number. Not every build is published: a GitHub release lists everything since the last one, so read down to the previous published version.
 
+## v1.16.0: "Coach"
+
+### New
+- **Coach drone.** In practice, the reflex test, the tutorial and the daily challenge, the stadium announcer is replaced by a little flying robot with arms and a rocket base (like your gloves' boosters). It hovers beside you and shouts "Nice save!", "Fingertip!", "World class!", "Safe hands!" and more in its own chirpy robot voice. At the end it flies in for a **double high five**: slap both its hands. Or punch it in the head and it loses its balance, crashes to the grass, lies there sparking, then gets back up a bit wobbly.
+- **Customisable boots** (MY CLUB → BOOTS): the same designs, patterns and colours as the gloves (sole and laces instead of palm and strap), plus MATCH MY GLOVES. You'll see them on your keeper's feet.
+- **"Beast" gloves**: a dark teal design with black raised ribs across the fingers and a grey palm, using a new **Ribs** pattern you can also pick for your own gloves and boots.
+- **Robot scorers are named.** When a robot scores, the announcer calls out who it was: the rival, or a punny robot footballer (Wayne Rooney-tron, Gary Line-coder, Jack Grease-lish, Peter Crouch-droid, Cole Palm-pilot and more), with the name over his head and on the scoreboard.
+- **Title screen**: punch the ball at the warming-up robot and he explodes into pieces, which bounce around the pitch and then whizz back together.
+
+### Changed
+- **Real football, properly kicked.** Every pass, cross, shot and dribble touch now has a visible kick: the robot winds up and his foot meets the ball, and a pass is controlled with a first touch. The robot on the ball lines his kicking foot up with it. The ball never moves unless someone kicks it (or you throw it), it bounces off any robot in its way instead of passing through, and if it ever sits still in open play the nearest robot is sent for it.
+- **Running looks right.** Robots' strides now match their speed (no more skittering legs when they sprint), still with the stiff, robotic servo steps.
+- **Better slide tackles.** Three tackles (a studs-first slide, a two-footed flying scissor lunge and a spinning low sweep), and the robot who's hit goes tumbling: rolled over his shoulder, spun round and down, or upended onto his front, before getting back up.
+- **Drop kick**: you toss the ball up a little, it drops to your boot at knee height out in front, and your leg follows through high into view with a streak behind the boot. Big ones get a moment of slow motion and a trail on the ball. It still flies where you're looking.
+- **Options are organised by category**: GAMEPLAY, CONTROLS, GRAPHICS, SOUND & VIBRATION, COMFORT and ABOUT. The pause menu's OPTIONS opens the same pages (gameplay settings and calibration wait until you're out of the match).
+- **Gloves page**: the preview has its own panel beside the pads, so the gloves no longer poke through the buttons. "READY-MADE DESIGNS" and "MAKE YOUR OWN" are clearly separated: designs are pads in their own colours, the parts you change are the teal pads below.
+- **Maresfield's keeper kit is purple** again (older saves had drifted).
+- **Crowd**: each stand is now drawn separately (stands out of view are skipped) and heads are part of the same mesh as the bodies, which halves the crowd's draw work at the same look.
+
+## v1.15.0: "Flowing Football"
+
+### New
+- **Acrobatic finishes.** The opposition now cross from the wings for their striker to meet in the air with a **volley**, a **header**, a **diving header** or a **bicycle kick**, each with its own animation (leaving the ground, the strike, the landing and getting back up), a banner and an announcer call. The warning still comes first: orange eyes, a beep and a "!" before every one. Sometimes one of your defenders gets there first and heads it clear.
+- **Away kits.** The away team always changes into an away kit picked to stand out from the home shirts, so you never mix up the teams (no more orange against red).
+- **Team-mate markers.** A small spinning mint-green marker floats over your team-mates' heads in matches.
+- **Options on the pause menu.** Pause now has RESUME, OPTIONS and QUIT, with RECENTER VIEW and RESET HEIGHT below. OPTIONS covers sound & vibration, comfort, graphics, foveated rendering, frame time, replays, seated/standing, which wrist the HUD is on, and reduced flashing. BACK takes you back to the pause menu.
+
+### Changed
+- **The ball only moves when someone kicks it.** Every pass, shot, cross and back-pass is struck by a robot actually on the ball. Possession never just swaps: losing the ball is now a pass that gets read and cut out, or a tackle. A loose ball goes to whoever reaches it first.
+- **Smoother dribbling.** The robot on the ball runs flat out onto it and keeps it close instead of trailing behind.
+- **Smarter AI.**
+  - Passes go to team-mates in space with a clear lane; marked players get ignored.
+  - Under pressure a robot moves the ball on quickly; in space he runs with it.
+  - Off the ball, one team-mate always shows for a short pass and the most advanced player makes a run in behind.
+  - Defenders split into one closing the ball down (staying goal-side), one covering, and the rest marking a man. Robots far from play jog instead of sprinting.
+
+## v1.14.0: "Rivals"
+
+### New
+- **Rival robots.** Seven star strikers with names that send up real footballers, each with their own look (hair, beards, a crown, a captain's armband, speed fins), a name tag over their head, a favourite mix of shots and a **signature shot**:
+  - **KANE-O-MATIC 9** (Cogsworth Rovers): low, hard and right in the corner (SPOT-ON).
+  - **MBAP-E 7** (Voltchester City): rapid drives that skim the turf (TURBO DRIVE).
+  - **HAAL-UNIT 99** (Boltham Athletic): hits everything as hard as he can (THE HAMMER).
+  - **RON-DROID 77** (Circuit Wanderers): knuckleballs that dance in the air (KNUCKLE-BOT).
+  - **MESS-E 10** (Steelport United): dummies, curlers and the MAGIC CHIP.
+  - **SALAH-MATIC 11** (free agent, beat 3 rivals): bends it into the far corner (THE CURL).
+  - **BOT-ALDINHO 80** (free agent, beat 5 rivals): tricks and the NO-LOOK finish.
+- **In the season** each club's rival leads the line. The announcer warns you about him at kick-off ("Watch out for... Haal-Unit!"), and up to twice a match he tries his signature shot, with a banner, his colour on the ball and his own call. Win the match to beat him.
+- **RIVAL DUEL** (MORE MODES → RIVALS): 10 shots from the rival you pick, three of them his signature. Save 6 to beat him. Stopping a signature shot is worth +200.
+- **More unlockables:**
+  - **Match balls** (MY CLUB → BALL & NET), one for beating each rival: Retro leather, Neon, Steel, Pinwheel, Galaxy, Pharaoh and Samba. The ball you pick is used in every mode.
+  - **Goal nets:** Club colours (win 3 season matches), Red (keep 5 clean sheets), Midnight (beat 2 rivals) and Volt (beat all 7).
+  - The two free-agent rivals unlock their own duels.
+- The trophy cabinet shows how many unlocks you've earned and how many rivals you've beaten.
+
+### Changed
+- Locked pads show what you need to do in bigger, two-line text (for example "BEAT / MBAP-E").
+- MY CLUB has four pads along the bottom: KIT & CREST, GLOVES, BALL & NET and BACK.
+
+## v1.13.0: "Champions"
+
+### New
+- **Lift the trophy.** Win the league or the cup and a plinth rises out of the turf in front of you with the trophy on it. Grab it with either glove and lift it over your head: fireworks go up over the stands, confetti rains down, the crowd sings your name and the announcer calls it. Then the results come up, and the trophy is in your cabinet. On a PC (or if you don't lift it within 20 seconds) it lifts itself.
+- **Things to earn:**
+  - Three new glove designs: **Champion** (win the league), **Cup Hero** (win the cup) and **Worldie** (make 3 Worldie saves), with three new glove colours (Champion Gold, Chrome, Cosmic).
+  - Two new kit colours: **Champion Gold** (win 5 season matches) and **Teal** (keep 3 clean sheets).
+  - **Stadium choice** for arcade, shootout and 2 player (MORE MODES → STADIUM): National Arena, Town Stadium, **Sunday League Park** (win a season match) and the **World Final** (win the cup).
+  - Locked pads say how to earn them, and an "UNLOCKED!" chip and jingle pop up when you do. Things you'd already earned before this update are unlocked without a pile of pop-ups.
+- **Match report on the full-time screen:** a goal map of where this match's shots went (saved / faced in each zone, green to red) and your three best saves with their speed and your reaction time.
+- **The crowd reacts to you:** after a big save the fans sing your name ("LO-GAN!" clap clap clap) for every name the announcer knows ("KEE-PER!" otherwise), and they boo the referee when a foul goes against you.
+- **Announcer variety:** 2–3 different lines for most calls (saves, goals, kick-off, full time, fouls, free kicks, penalties, corners, the woodwork, near misses, counters, replays and more), never the same one twice in a row.
+- **Sound & vibration page** (OPTIONS → MATCH, SOUND & MORE): separate volumes for music, crowd, announcer and effects, plus controller vibration strength. Each pad steps down by 20% and plays a sample.
+- **Comfort page:** snap turning (30° or 45°) or smooth turning on the right stick, a comfort vignette that darkens the edges of your view while the stick moves or turns you (off / light / strong), and **RESET HEIGHT**, which re-measures your eye height so you stand at keeper height. RESET HEIGHT is on the pause menu too.
+- **Frame-time readout** (FRAME TIME): FPS, frame time, worst frame, CPU/GPU time and draw calls in the corner of your view, green when on target and red when dropping frames.
+- **Foveated rendering** (FOVEATED: off / light / strong) draws the edges of your view in less detail to keep the frame rate up, where the headset and GPU support it.
+
+### Changed
+- **Tutorial:** catching now tells you to keep the ball, and there are new steps for the overarm throw, rolling it out and the drop kick (with your controller's button names).
+- **No more hitch when the venue changes:** every stadium is built while the game loads, so going from the menu to a match (and back) is instant.
+
+## v1.12.1: "Distribution"
+
+### New
+- **Four ways to get the ball back into play** when you have it:
+  - **Throw it overarm:** swing from up high and let go of the grip for a long throw, nudged a little towards where you're looking.
+  - **Roll it out:** sweep your hand low and let go, and it's rolled along the ground.
+  - **Pass:** press cross / square (A / X) to pass to the teammate you're looking at.
+  - **Drop kick:** hold circle (B) and let go. The ball drops from your hands, your robot leg winds back, swings through and volleys it, with a thump, a burst of sparks, a ring of light, a hard controller kick and a split-second freeze. It flies straight where you're looking. The longer you hold, the harder it goes (full power after a second), shown by a meter over the ball that turns from green to red. From your feet (a goal kick or a trapped back-pass) it's a big hoof with the same swing.
+
+### Changed
+- **Buttons:** the left triangle (Y) recentres the view, and the right circle (B) is the drop kick. Options, Create and Menu pause. The PS VR2 Options button now also works through the system-button route SteamVR uses for it.
+- The Controls page and the in-game hints name your controller's buttons (for example "CROSS: pass · CIRCLE: drop kick · or throw it").
+
+### Fixed
+- A goal-kick ball at your feet could not be kicked (it was never put into play).
+
+## v1.12.0: "Proper Football"
+
+### Changed
+- **Season matches play like real football.** The ball has real physics: passes are kicked along the ground or lofted, slow down as they roll and bounce when they land. Passes go in front of the receiver, who runs onto them, and defenders near the ball's path can cut them out. A pass nobody reaches is chased down by whoever's nearest, and an overhit one runs out for a throw-in or corner. Nothing is scripted any more, so moves break down and turn over naturally.
+- **Tackles only go in on the robot with the ball.** If he's already moved it on, the tackle hits nobody.
+- **Their striker shoots on the run** from all sorts of distances, from close in to 30-odd metres, with a short warning first: his lights flash orange, he beeps and a "!" pops up over his head.
+- **Free kicks and penalties now come from fouls.** The whistle goes, the announcer calls it ("That's a foul! Free kick!" or "Penalty! The referee points to the spot!"), a banner pops up, and the big screen replays the foul while the ball is placed.
+- **No more vanishing ball after a save.** A ball you catch or trap stays yours until you throw it, roll it, drop-kick it (A/X pass, B/Y kick) or drop it, and play carries on from wherever it goes. If you hang on to it for a very long time it gets thrown out to a defender for you. Shots that go wide are your goal kick: a new ball appears at your feet. The ball only goes back to the centre spot after a goal.
+- **Start screen:** the "BOOM!" text no longer sits in front of your eyes, the logo gets out of the way straight away, and the ball flies a little slower, so you can watch it all the way into the far net.
+- **Menu pads need a pull-back:** after pressing a pad you have to pull your hand back in front of the next pad before it will press, so a punch that follows through can't hit the pad that appears behind it.
+- **Quit game:** a QUIT GAME pad in Options, with a check before it closes.
+- **Big screen:** everything now fits inside it. The team name, score, combo, match score or wave, lives, best score, focus meter and venue line each have their own space and shrink to fit, and big messages wrap onto at most two lines.
+- **Keeper's boots** are now built like the other robots' boots: chunky boots on kit-coloured soles with studs, a lace plate and a metal ankle joint.
+- **Reflex ball machine:** a proper tripod with splayed legs, rubber feet and braces, a yoke holding the launcher, a barrel with a steel muzzle, and a hopper of balls on top.
+- **Stretching gloves** no longer leave an orange beam back to your hand. The rocket flame is the effect now.
+- Four new announcer lines: "That's a foul!", "Free kick!", "Penalty! The referee points to the spot!" and "Goal kick."
+
 ## v1.11.1: "New Look"
 
 ### Changed
