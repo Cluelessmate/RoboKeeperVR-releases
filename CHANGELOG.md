@@ -2,6 +2,33 @@
 
 Every change gets a new build number. Not every build is published: a GitHub release lists everything since the last one, so read down to the previous published version.
 
+## v1.16.1
+
+### New
+- **New logo and icon: "Visor".** A VR headset whose lens shows your view of a shot coming in: the ball flying at you in a yellow burst and your orange gloves reaching for it, with the six pad colours underneath. It's the game's icon, the Windows .exe icon and the loading screen, now with a white ROBOKEEPER title and the cyan VR pad.
+- **The coach drone has a face.** Its head is now a little TV with a glowing screen, and the screen shows how it feels:
+  - **Starry eyes** and a big grin for a worldie or a fingertip save, a **happy ^ ^ smile** for a save, a **proud** little smile for a catch, a gasp then a grin for a point-blank stop.
+  - **Sad** (droopy eyes, a frown and a tear) when you concede, **disappointed** if you leave it hanging on the high five, **excited** while it waits for one, and over the moon when you give it.
+  - **> <** when you punch it, **spiral eyes** while it lies on the grass, then **woozy** as it gets back up. The screen glitches when it takes a knock.
+  - Its eyes **follow the ball** in flight and blink and glance around the rest of the time. The ear rings, antenna tip and the band round its rocket glow in the same colour as its mood.
+  - A ball you've already touched (a parry or a throw) now **bounces off** it ("OW!"); a live shot it ducks out of the way of, so it never changes whether a shot goes in.
+- **Smarter-looking drone:** a fin across the top, bigger ear pods, a springy antenna that wobbles as it flies, and three tail fins on the rocket.
+- **Cute new drone voice.** A higher, softer robot voice that finishes each line with a little chirp (a happy trill, a sad slide down, a squeak when it's hurt, a warble when it's dizzy). 33 new lines on top of the old ones, never the same one twice in a row:
+  - hello and goodbye ("Hello, keeper! Beep beep!", "Bye bye! Beep!");
+  - saves ("Beep boop! Nice save!", "Boop! Blocked!", "Superstar!", "Does not compute! Amazing!", "My circuits are tingling!", "Sticky gloves!", "Got it! Hee hee!");
+  - goals ("Aww... beep.", "Oopsie!", "I believe in you!");
+  - the high five ("Up top!", "Woo hoo!", "Aww, left hanging...");
+  - knocks ("Ouchie!", "Hey! Rude!", "My antenna!", "Bonk!", "Eek!", "Bzzt... seeing stars...", "Rebooting... I'm okay!");
+  - and in a quiet moment it hums or chats to itself ("La la la...", "Ready when you are!", "I'm watching the ball!").
+- When you concede, the drone always looks sad now (it still only speaks half the time).
+
+### Changed
+- **Better grass in every weather.** Same hand-painted look, but it now reacts properly to the conditions:
+  - **Rain:** the turf goes darker and glossy instead of shiny foil blotches. A few puddles collect in the low spots (only the odd one on stadium pitches, more at the park and the rec), with rain rings rippling in them. The muddy goalmouths go slick.
+  - **Snow:** a proper soft white cover that lies thinner in places so grass peeps through, trampled to grey slush in the goalmouths. The pitch lines are painted **blue** in snow so you can still see them.
+  - **Clear days:** slightly bolder mowing stripes, and fine blade streaks along the cut when you look down (they fade out with distance, so no shimmer).
+  - **Grass tufts** round the goal now sway in the breeze and bend and gust with the wind. They go dark in the rain and stick up out of the snow.
+
 ## v1.16.0: "Coach"
 
 ### New
