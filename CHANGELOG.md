@@ -2,6 +2,82 @@
 
 Every change gets a new build number. Not every build is published: a GitHub release lists everything since the last one, so read down to the previous published version.
 
+## v1.18.0
+
+### Modes, simplified
+- **Five modes instead of ten.** The main menu is now **CAREER · ARCADE · PLAY / MY CLUB · TROPHIES · OPTIONS**, and **PLAY** holds the **Penalty Cup**, **Training** and **2 Player** (plus **Stats & scores**).
+- **The daily challenge is gone**, and so are its online board and its "Daily hero" trophy (that cabinet slot is now the Penalty Cup).
+- **Shootout and Rival Duels** are replaced by the Penalty Cup. **Practice, the reflex test and the tutorial** now live under Training. **Online scores** sit on the Stats page, and the **button guide** is in Options > Controls.
+
+### New
+- **Career.** Season mode grows into a career. You stay with your own club and kit, and climb four divisions: **County League**, **Robo League**, **Robo Premier**, **World Elite**. Each one is a step harder and has a bigger home ground. Finish in the top two to go up, bottom and you go down. Scouts give you a **keeper rating** every season, and the career hub keeps your history (Career > FIXTURES > MY CAREER). Existing seasons carry on in the Robo League.
+- **Penalty Cup.** A three-round knockout (quarter-final, semi-final, final) against the rival robots. Each tie is five penalties, and one of them is the rival's signature shot. Your team's five kicks are rolled at the start, so you know how many you must keep out. Win the final for the **Penalty Cup** trophy and a trophy lift.
+- **Training drills**, run by the coach drone:
+  - **Reaction Lights**: 20 pads light up around you, always inside your calibrated reach. Punch each one before it goes out; quicker hits score more.
+  - **Low Dives**: 15 skimmers from the ball machine into the bottom corners.
+  - **Crosses**: 12 corners and crosses (below).
+- **Corners and crosses.** In Arcade (from wave 2), mixed practice and the Crosses drill, the striker whips the ball in from wide while two robot attackers charge in to head it. The cross is always aimed inside your reach from your line, so you never need to move. Claim it, punch it, or let a robot nod it at the far corner. Step forward if you want to: you meet it, and them, sooner.
+- **Punch the robots.** Any robot that gets too close (corner attackers, the rebounder, match robots charging in) can be punched. A jab gets "BOXED OUT! +50"; a big swing knocks it flat, "FLATTENED! +100".
+- **Glove perks**, earned with saves in any mode: **GRIP+** at 50 (catches stick more easily), **PUNCH+** at 150 (punches go further), **REACH+** at 300 (a slightly bigger glove), **TURBO** at 500 (gold booster flames). Options > Gameplay > PERKS turns them off.
+- **Best saves.** Your six best saves ever, with their replays, are kept in a **Save of the Season** reel. Trophies > BEST SAVES plays them on the big screen.
+- **The crowd is on your side.** Four saves in a row and the crowd sings your name. On match days (career and Penalty Cup), home fans in the side stands hold up banners such as "#01 LOGAN" and "SAFE HANDS" in your colours.
+- **2 Player: pass the headset.** Player 1 keeps for ten shots while player 2 shoots on the PC, then "SWAP!", and player 2 goes in goal. Most saves wins, with both scores side by side, and the PC screen tells you whose go it is.
+- **Crash log and Report a Bug.** If the game closed without quitting properly, the next start saves a crash report from the last session's log. Options > REPORT A BUG saves a report now (version, PC, settings and the log) and opens its folder.
+- **Update notice.** If a newer build is on GitHub, the main menu says so.
+
+### Behind the scenes
+- **Tests on GitHub.** Every push runs the headless tests and autotests (`.github/workflows/tests.yml` and `tools/ci_tests.sh`), so a broken build shows up as a red cross.
+- **Online leaderboard, ready to switch on.** `server\deploy.ps1` puts the score server on your free Cloudflare account and fills in `config/online.cfg` (steps in `server/DEPLOY.md`). It is Arcade-only now.
+- **Website assets.** Transparent logos (`docs/website/logo_*.png`) and 1920x1080 screenshots (`docs/website/screenshots/`), made by `tools/make_web_assets.py` and `tests/v14_shots.gd --only=web`.
+- **New autotests:** `--cup` and `--drill --kind=lights|lowdives|crosses`. The `--shootout`, `--rival` and `--daily` flags are gone.
+
+### Fixed
+- A rebound robot that got knocked over mid-chase could leave the game waiting for a shot that never came.
+
+## v1.17.0
+
+### New
+- **Read the kick from the run-up.** Each kick style now shows itself over the second half of the run-up: the robot leans back for a chip or a dink, leans in and pumps its arms for a laces drive, comes in on a curved approach with its shoulders open for a curler, runs low for a driven shot and goes stiff-legged for a toe-poke. The timing of every shot is unchanged.
+- **Celebrations fit the moment.** An ordinary goal gets a small celebration (spin, ear cup, shush, the robot). A big moment gets a showpiece (backflip, floss, knee slide, aeroplane): a goal late in a match, every third goal you let in, the goal that costs your last life, a golden ball or a rival's signature shot.
+- **The coach drone joins in.** If the robot dances (the robot or the floss) the drone can't help bopping along for a moment, then catches itself and sulks. It does a spin for a worldie.
+- **A different feel for each save.** A fingertip save gives two light flicks, point blank one hard jolt, a worldie three rising pulses, a punch a thud and a knock back up the arm, a catch a tap then a squeeze in both hands, and the woodwork rattles.
+- **Your goalmouth wears in.** The grass in front of your goal gets scuffed and bare as a match or run goes on (and muddy in the rain). Fresh again for the next one.
+- **Visor logo glint.** The headset now opens on the Visor logo with a glint sweeping across it, carrying on from the desktop splash, before "LOGAN PRESENTS".
+- **Subtitles** (Options > Sound & Vibration). What the announcer and coach drone say, in small text low down in your view, well under where the ball comes. Off by default.
+- **RESTART NOW** on the Graphics page. It appears when you change graphics or foveated rendering, which only take effect on a restart, and restarts the game straight away.
+
+### Changed
+- **Voices come through clearly.** While the announcer or coach drone speaks, the crowd and weather dip by 7 dB, then come back up gently.
+- **No more loud spikes.** A limiter on the sound effects stops pile-ups (punch, post, cheer and horn at once) from getting too loud.
+- **Coach drone never blocks your view.** If it is between you and the robot or a ball in play, for example when a shot starts while it is still in front of you, it turns see-through until it is out of the way.
+- **Frame-time readout** now shows the graphics and foveated rendering settings actually running (and "restart to apply" when they differ from the menu), plus the frame-time target in ms.
+
+### Tests
+- **New menu test** (`tests/test_menus.tscn`): presses every pad on every page in every UI style, cycles every option through all its values and checks every label still fits its pad. It also checks that every page link leads somewhere and that the game handles every action the menu sends.
+
+## v1.16.2
+
+### New
+- **More goal celebrations.** When a robot scores it now picks one of eight (never the same twice running): the jumping spin, doing **the robot**, a **knee slide** towards you, the **aeroplane** (arms out, banking round in a circle), a **backflip**, cupping an ear to the crowd ("can't hear you!"), walking up to **shush** you, and **the floss**.
+- **Painted turf.** The grass has a hand-painted look that fits the rest of the game: soft brush-stroke clumps in three tones of green, slightly bolder mowing stripes with brushy edges, and painted blade strokes close to your feet that fade out with distance (no shimmer). Same colours as before, nothing oversaturated, and no toon shading.
+- **Kick variety.** Robots strike the ball differently for each kind of shot: a big laces drive with a hop off the ground for power shots, an inside-foot curl with the body swinging round for curlers and free kicks, a short stab leaning back for chips, a tiny dink for the Panenka, a low driven strike over the ball, and a stiff toe-poke for knuckleballs. The timing of every shot is unchanged, so they're no harder to read.
+
+- **Push the coach drone about.** Nudge it with your glove and it slides out of the way; park it somewhere else at the side and it stays there for the rest of the session. A hard push or a punch anywhere on it (not just the head) knocks it over.
+- **The drone comes to you between shots.** While a shot is on its way it waits out to the side as before, but in the lull between shots it flies round to hover in front of you, then darts back out of the way as soon as the next run-up starts.
+
+### Changed
+- **Sound effects balanced.** Every sound was measured and the ones that stood out were turned down: the referee's whistles (7 dB), the punch (6 dB, it plays right next to your head), the wave-clear, game-over and star jingles, the robots' happy chirps, the glove catch, cheers and "ooh"s, and a few others (2-5 dB).
+- **No big pop-ups in your way mid-match.** Call-out banners during play are half the size and sit high above the action, out of the line of any shot, and they duck away completely whenever a ball is in the air. Score pop-ups near your face are drawn smaller, and "+1 LIFE", "UNLOCKED" and tips now appear low, below your eye line.
+- **Distant ball looks better.** Instead of turning into a bright white glow far away, the ball keeps its panels and gets a crisp lit rim and a thin gold tracking ring round it (like a TV ball tracker). It still grows a little with distance so you can pick it up early.
+- **Softer, quieter rain.** The rain no longer hisses: it's a soft, lower patter on the grass and about 9 dB quieter.
+- **Puddles look natural.** Puddles were blocky shapes with sharp, straight edges; now they're rounded with a soft damp shoreline. Muddy patches on park pitches lost their blocky edges too.
+- **Warmer announcer.** The stadium announcer is less harsh: a wider, smoother PA sound with much less distortion and a darker echo. Every announcer clip was remade.
+- **Credits** now say "Made by Kieran and Logan."
+
+### Fixed
+- **White specks on dry grass.** Little white patches were dotted over every pitch even on clear days: a bit of the snow cover was leaking through when it wasn't snowing. Gone, along with the square glints the old bumpy grass texture made in the sun.
+- **Grey screen when changing graphics settings.** Changing GRAPHICS or FOVEATED mid-game rebuilt the headset's picture (its resolution, anti-aliasing and shading rate) while it was rendering, which could freeze it (SteamVR's grey screen). Those parts are now set once when the game starts, and a change applies the next time you start; shadows still change straight away. Changing any other option no longer touches the headset's picture at all.
+
 ## v1.16.1
 
 ### New
